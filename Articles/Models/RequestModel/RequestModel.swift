@@ -9,6 +9,7 @@
 import Foundation
 
 let APIURLPrefix = "https://api.nytimes.com/svc/"
+let ImageURLPrefix = "https://static01.nyt.com/"
 
 enum Request {
     

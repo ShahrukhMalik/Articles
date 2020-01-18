@@ -56,6 +56,7 @@ class ArticlesListViewController: UIViewController {
         
         // Right Bar Item
         let searchButton = UIButton(type: .custom)
+        searchButton.frame = CGRect(x: 0.0, y: 0.0, width: 40.0, height: 40.0)
         searchButton.addTarget(self, action:#selector(handleSearch), for: .touchUpInside)
         searchButton.tintColor = .white
         let searchIcon = articlesListViewModel.searchImage
@@ -166,6 +167,7 @@ extension ArticlesListViewController : UITableViewDataSource {
         cell.subTitleLabel.text = articleViewModel.snippet
         cell.dateLabel.text = articleViewModel.formattedDateString
         cell.dateImageView.image = articleViewModel.dateImage
+        cell.mainImageView.loadImageUsingUrlString(urlString: articleViewModel.imageURLString)
         
         return cell
     }

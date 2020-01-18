@@ -130,7 +130,7 @@ class ArticlesListViewModel : NSObject {
             var imageUrlString: String? = nil
             
             if item.multimedia.count > 0 {
-                imageUrlString = APIURLPrefix + item.multimedia[0].url
+                imageUrlString = ImageURLPrefix + item.multimedia[0].url
             }
             
             let viewModel = ArticleViewModel(title: item.headline.main,
