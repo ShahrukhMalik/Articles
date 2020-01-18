@@ -11,9 +11,16 @@ import UIKit
 protocol ArticlesListViewModelDelegate: class {
     func showError(error: String)
     func showLoader(show: Bool)
+    func showRecentScreen(show: Bool)
+    func updateSearchFieldWithText(search: String)
 }
 
 class ArticlesListViewModel : NSObject {
+    
+    override init() {
+        super.init()
+        NotificationCenter.default.addObserver(self, selector: #selector(searchTermClicked(notif:)), name: NSNotification.Name(rawValue: "SearchTermTapped"), object: nil)
+    }
     
     var delegate: ArticlesListViewModelDelegate?
     
@@ -34,6 +41,12 @@ class ArticlesListViewModel : NSObject {
     var isSearchVisible: Bool = false {
         didSet {
             self.reloadTableViewClosure?(nil)
+        }
+    }
+    
+    var searchFocused: Bool = false {
+        didSet {
+            delegate?.showRecentScreen(show: true)
         }
     }
     
@@ -89,14 +102,22 @@ class ArticlesListViewModel : NSObject {
     
     
     // MARK: - Private methods
+    @objc func searchTermClicked(notif: Notification) {
+        let dic = notif.userInfo
+        let searchTerm = dic?["Search"] as! String
+        searchString = searchTerm
+        delegate?.updateSearchFieldWithText(search: searchTerm)
+    }
     
     func filterArticleViewModelWithText(searchText: String) {
         var filtered = filteredArticleViewModels
         
         if searchText.isEmpty {
             filtered = self.articleViewModels
+            delegate?.showRecentScreen(show: true)
             
         } else {
+            delegate?.showRecentScreen(show: false)
             filtered = self.filteredArticleViewModels.filter {
                 $0.title.range(of: searchText, options: .caseInsensitive) != nil
             }

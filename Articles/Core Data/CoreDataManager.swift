@@ -11,8 +11,6 @@ import Foundation
 
 final class CoreDataManager {
     
-    static let shared = CoreDataManager()
-    
     
     // MARK: - Core Data stack
     

@@ -17,6 +17,10 @@ class ArticlesListViewController: UIViewController {
     
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
+    @IBOutlet weak var containerView: UIView!
+    
+    var recentViewController : RecentSearchViewController?
+    
     
     // MARK: - Properties
     private var articlesListViewModel: ArticlesListViewModel!
@@ -102,6 +106,15 @@ class ArticlesListViewController: UIViewController {
         articlesListViewModel.isSearchVisible = false
         articlesListViewModel.searchString = ""
         searchBar.text = ""
+        
+        removeRecentScreen()
+    }
+    
+    func removeRecentScreen() {
+        if recentViewController != nil {
+            recentViewController?.remove()
+            recentViewController = nil
+        }
     }
     
     
@@ -118,11 +131,15 @@ class ArticlesListViewController: UIViewController {
             let destination = segue.destination as? ArticleDetailViewController
             let indexPath = tableView.indexPathForSelectedRow
             destination?.articleViewModel = getArticleViewModel(at: indexPath!)
+            
+            if articlesListViewModel.isSearchVisible && !articlesListViewModel.searchString.isEmpty {
+                // Save recent search
+                let coreDataManager = CoreDataManager()
+                coreDataManager.insertSearchTerm(searchTerm: articlesListViewModel.searchString, withDate: Date())
+            }
         }
     }
 }
-
-
 
 extension ArticlesListViewController : UITableViewDataSource {
     
@@ -148,6 +165,11 @@ extension ArticlesListViewController : UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        if articlesListViewModel.isSearchVisible {
+            return
+        }
+        
         let lastElement = articlesListViewModel.filteredArticleViewModels.count - 1
         if !articlesListViewModel.loadingData && indexPath.row == lastElement {
             currentPageNumber += 1
@@ -194,6 +216,11 @@ extension ArticlesListViewController : UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         articlesListViewModel.searchString = searchText
     }
+    
+    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
+        articlesListViewModel.searchFocused = true
+        return true
+    }
 }
 
 extension ArticlesListViewController : ArticlesListViewModelDelegate {
@@ -215,5 +242,24 @@ extension ArticlesListViewController : ArticlesListViewModelDelegate {
         DispatchQueue.main.async {
             self.activityIndicatorView.isHidden = !show
         }
+    }
+    
+    func showRecentScreen(show: Bool) {
+        
+        if show {
+            removeRecentScreen()
+            
+            recentViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RecentSearchViewController") as? RecentSearchViewController
+            recentViewController?.configureViewModel()
+            
+            self.add(recentViewController!, frame: containerView.frame)
+            
+        } else {
+            removeRecentScreen()
+        }
+    }
+    
+    func updateSearchFieldWithText(search: String) {
+        searchBar.text = search
     }
 }
