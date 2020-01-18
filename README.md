@@ -35,13 +35,13 @@ Application supports both portrait and landscape orientations. Auto layouts are 
 
 ![alt text](https://user-images.githubusercontent.com/11407348/72669845-27568e00-3a50-11ea-952e-966df40a1b8a.png)
 
-![alt text](https://user-images.githubusercontent.com/11407348/72669855-3e957b80-3a50-11ea-897e-3ae3bdaf59ec.png)
+![alt text](https://user-images.githubusercontent.com/11407348/72670419-8cad7d80-3a56-11ea-84eb-9877ff99160d.png)
 
 **Landscape**
 
 ![alt text](https://user-images.githubusercontent.com/11407348/72669861-5240e200-3a50-11ea-9c84-94a342c4a284.png)
 
-![alt text](https://user-images.githubusercontent.com/11407348/72669862-61279480-3a50-11ea-8f76-8c5ff21526fb.png)
+![alt text](https://user-images.githubusercontent.com/11407348/72670441-b797d180-3a56-11ea-9a53-33c4b3cdb744.png)
 
 
 # Features
