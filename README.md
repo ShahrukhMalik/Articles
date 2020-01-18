@@ -26,7 +26,7 @@ Open .xcodeproj and press **Command + R**
 # Unit testing and code coverage
 Open .xcodeproj and press **Command + U** to run the test cases. Code coverage is shown in following screenshot:-
 
-![alt text](https://cdn1.imggmi.com/uploads/2019/12/20/897df953ba488ddd0328fbbf06dc8177-full.png)
+![alt text](https://cdn1.imggmi.com/uploads/2020/1/18/c1210133b86d2cc6c48edf7765bc6374-full.png)
 
 # Screenshots
 Application supports both portrait and landscape orientations. Auto layouts are used to design screens in accordance with Apple Human Interface guidelines.
