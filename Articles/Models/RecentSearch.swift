@@ -8,12 +8,9 @@
 
 import Foundation
 
-class RecentSearchModel {
-    let term: String
-    let date: Date
+struct RecentSearchModel {
+    let term: String!
+    let date: Date!
     
-    init(aTerm: String, aDate: Date) {
-        self.term = aTerm
-        self.date = aDate
-    }
+   
 }

@@ -26,12 +26,10 @@ class RecentSearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViewModel()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
         fetchRecentSearches()
     }
+    
+    
     
     
     // MARK: - Private methods
@@ -81,9 +79,5 @@ extension RecentSearchViewController : UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         let recentViewModel : RecentSearchViewModel = viewModel.recentSearchViewModels[indexPath.row]
         viewModel.searchTermClicked(searchTerm: recentViewModel.term)
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 30.0
     }
 }

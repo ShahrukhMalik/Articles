@@ -7,6 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		821D32D723D2E48F00223488 /* ArticleRemoteRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821D32B823D2E48F00223488 /* ArticleRemoteRepositoryTests.swift */; };
+		821D32D823D2E48F00223488 /* ArticleViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821D32B923D2E48F00223488 /* ArticleViewModelTests.swift */; };
+		821D32DA23D2E48F00223488 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821D32BC23D2E48F00223488 /* Extensions.swift */; };
+		821D32DB23D2E48F00223488 /* ArticleDetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821D32BD23D2E48F00223488 /* ArticleDetailViewControllerTests.swift */; };
+		821D32DE23D2E48F00223488 /* ArticlesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821D32C023D2E48F00223488 /* ArticlesTests.swift */; };
+		821D32DF23D2E48F00223488 /* ArticlesListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821D32C123D2E48F00223488 /* ArticlesListViewModelTests.swift */; };
+		821D32E023D2E48F00223488 /* StubArticlesRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821D32C423D2E48F00223488 /* StubArticlesRemoteRepository.swift */; };
+		821D32E123D2E48F00223488 /* StubArticlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821D32C523D2E48F00223488 /* StubArticlesViewController.swift */; };
+		821D32E223D2E48F00223488 /* StubArticles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821D32C723D2E48F00223488 /* StubArticles.swift */; };
+		821D32E523D2E48F00223488 /* StubArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821D32CA23D2E48F00223488 /* StubArticle.swift */; };
+		821D32E623D2E48F00223488 /* StubNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821D32CC23D2E48F00223488 /* StubNavigationViewController.swift */; };
+		821D32E723D2E48F00223488 /* Article.json in Resources */ = {isa = PBXBuildFile; fileRef = 821D32CE23D2E48F00223488 /* Article.json */; };
+		821D32E823D2E48F00223488 /* Articles.json in Resources */ = {isa = PBXBuildFile; fileRef = 821D32CF23D2E48F00223488 /* Articles.json */; };
+		821D32EA23D2E48F00223488 /* StubServiceApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821D32D323D2E48F00223488 /* StubServiceApi.swift */; };
+		821D32EB23D2E48F00223488 /* StubURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821D32D423D2E48F00223488 /* StubURLSession.swift */; };
+		821D32EC23D2E48F00223488 /* StubTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821D32D623D2E48F00223488 /* StubTableView.swift */; };
+		821D32EE23D31F5200223488 /* DownloaderImageViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821D32ED23D31F5200223488 /* DownloaderImageViewTests.swift */; };
+		821D32F023D31FAF00223488 /* StubDownloaderImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821D32EF23D31FAF00223488 /* StubDownloaderImageView.swift */; };
+		821D32F223D3226D00223488 /* StubResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821D32F123D3226D00223488 /* StubResponse.swift */; };
+		821D32F423D3238900223488 /* StubMultimedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821D32F323D3238900223488 /* StubMultimedia.swift */; };
+		821D32F623D3239800223488 /* StubHeadline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821D32F523D3239800223488 /* StubHeadline.swift */; };
+		821D32F923D3262A00223488 /* StubCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821D32F823D3262A00223488 /* StubCoreDataManager.swift */; };
+		821D32FB23D3321600223488 /* CoreDataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821D32FA23D3321600223488 /* CoreDataManagerTests.swift */; };
+		821D32FD23D33C3300223488 /* ArticleListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821D32FC23D33C3300223488 /* ArticleListViewControllerTests.swift */; };
 		827CE85123D19E5E00372509 /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827CE85023D19E5E00372509 /* ArticleDetailViewController.swift */; };
 		827CE85323D1A17C00372509 /* ArticlesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827CE85223D1A17C00372509 /* ArticlesListViewModel.swift */; };
 		827CE85523D1A2C900372509 /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827CE85423D1A2C900372509 /* ArticleViewModel.swift */; };
@@ -39,7 +63,6 @@
 		B1379E6B23CF999E00042DE8 /* Articles.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B1379E6923CF999E00042DE8 /* Articles.xcdatamodeld */; };
 		B1379E6D23CF999E00042DE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1379E6C23CF999E00042DE8 /* Assets.xcassets */; };
 		B1379E7023CF999E00042DE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1379E6E23CF999E00042DE8 /* LaunchScreen.storyboard */; };
-		B1379E7B23CF999F00042DE8 /* ArticlesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1379E7A23CF999F00042DE8 /* ArticlesTests.swift */; };
 		B1379E8623CF999F00042DE8 /* ArticlesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1379E8523CF999F00042DE8 /* ArticlesUITests.swift */; };
 		B1379E9C23CF9D3D00042DE8 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1379E9B23CF9D3D00042DE8 /* CustomNavigationController.swift */; };
 		B1379E9E23CF9E1800042DE8 /* ArticlesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1379E9D23CF9E1800042DE8 /* ArticlesListViewController.swift */; };
@@ -63,6 +86,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		821D32B723D2E48E00223488 /* ArticlesTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ArticlesTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		821D32B823D2E48F00223488 /* ArticleRemoteRepositoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleRemoteRepositoryTests.swift; sourceTree = "<group>"; };
+		821D32B923D2E48F00223488 /* ArticleViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleViewModelTests.swift; sourceTree = "<group>"; };
+		821D32BC23D2E48F00223488 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		821D32BD23D2E48F00223488 /* ArticleDetailViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewControllerTests.swift; sourceTree = "<group>"; };
+		821D32C023D2E48F00223488 /* ArticlesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesTests.swift; sourceTree = "<group>"; };
+		821D32C123D2E48F00223488 /* ArticlesListViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesListViewModelTests.swift; sourceTree = "<group>"; };
+		821D32C423D2E48F00223488 /* StubArticlesRemoteRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StubArticlesRemoteRepository.swift; sourceTree = "<group>"; };
+		821D32C523D2E48F00223488 /* StubArticlesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StubArticlesViewController.swift; sourceTree = "<group>"; };
+		821D32C723D2E48F00223488 /* StubArticles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StubArticles.swift; sourceTree = "<group>"; };
+		821D32CA23D2E48F00223488 /* StubArticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StubArticle.swift; sourceTree = "<group>"; };
+		821D32CC23D2E48F00223488 /* StubNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StubNavigationViewController.swift; sourceTree = "<group>"; };
+		821D32CE23D2E48F00223488 /* Article.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Article.json; sourceTree = "<group>"; };
+		821D32CF23D2E48F00223488 /* Articles.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Articles.json; sourceTree = "<group>"; };
+		821D32D323D2E48F00223488 /* StubServiceApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StubServiceApi.swift; sourceTree = "<group>"; };
+		821D32D423D2E48F00223488 /* StubURLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StubURLSession.swift; sourceTree = "<group>"; };
+		821D32D623D2E48F00223488 /* StubTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StubTableView.swift; sourceTree = "<group>"; };
+		821D32ED23D31F5200223488 /* DownloaderImageViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloaderImageViewTests.swift; sourceTree = "<group>"; };
+		821D32EF23D31FAF00223488 /* StubDownloaderImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubDownloaderImageView.swift; sourceTree = "<group>"; };
+		821D32F123D3226D00223488 /* StubResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubResponse.swift; sourceTree = "<group>"; };
+		821D32F323D3238900223488 /* StubMultimedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubMultimedia.swift; sourceTree = "<group>"; };
+		821D32F523D3239800223488 /* StubHeadline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubHeadline.swift; sourceTree = "<group>"; };
+		821D32F823D3262A00223488 /* StubCoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubCoreDataManager.swift; sourceTree = "<group>"; };
+		821D32FA23D3321600223488 /* CoreDataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManagerTests.swift; sourceTree = "<group>"; };
+		821D32FC23D33C3300223488 /* ArticleListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListViewControllerTests.swift; sourceTree = "<group>"; };
 		827CE85023D19E5E00372509 /* ArticleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewController.swift; sourceTree = "<group>"; };
 		827CE85223D1A17C00372509 /* ArticlesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesListViewModel.swift; sourceTree = "<group>"; };
 		827CE85423D1A2C900372509 /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
@@ -98,7 +146,6 @@
 		B1379E6F23CF999E00042DE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1379E7123CF999E00042DE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1379E7623CF999F00042DE8 /* ArticlesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArticlesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B1379E7A23CF999F00042DE8 /* ArticlesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesTests.swift; sourceTree = "<group>"; };
 		B1379E7C23CF999F00042DE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1379E8123CF999F00042DE8 /* ArticlesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArticlesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1379E8523CF999F00042DE8 /* ArticlesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesUITests.swift; sourceTree = "<group>"; };
@@ -132,6 +179,100 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		821D32BB23D2E48F00223488 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				821D32BC23D2E48F00223488 /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		821D32C223D2E48F00223488 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				821D32F723D3261200223488 /* CoreData */,
+				821D32C323D2E48F00223488 /* Articles */,
+				821D32C623D2E48F00223488 /* Models */,
+				821D32CB23D2E48F00223488 /* StubNavigationController */,
+				821D32CD23D2E48F00223488 /* DummyJson */,
+				821D32D023D2E48F00223488 /* ImageDownloader */,
+				821D32D223D2E48F00223488 /* WebApi */,
+				821D32D523D2E48F00223488 /* StubTableView */,
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
+		821D32C323D2E48F00223488 /* Articles */ = {
+			isa = PBXGroup;
+			children = (
+				821D32C423D2E48F00223488 /* StubArticlesRemoteRepository.swift */,
+				821D32C523D2E48F00223488 /* StubArticlesViewController.swift */,
+			);
+			path = Articles;
+			sourceTree = "<group>";
+		};
+		821D32C623D2E48F00223488 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				821D32C723D2E48F00223488 /* StubArticles.swift */,
+				821D32F123D3226D00223488 /* StubResponse.swift */,
+				821D32CA23D2E48F00223488 /* StubArticle.swift */,
+				821D32F323D3238900223488 /* StubMultimedia.swift */,
+				821D32F523D3239800223488 /* StubHeadline.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		821D32CB23D2E48F00223488 /* StubNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				821D32CC23D2E48F00223488 /* StubNavigationViewController.swift */,
+			);
+			path = StubNavigationController;
+			sourceTree = "<group>";
+		};
+		821D32CD23D2E48F00223488 /* DummyJson */ = {
+			isa = PBXGroup;
+			children = (
+				821D32CE23D2E48F00223488 /* Article.json */,
+				821D32CF23D2E48F00223488 /* Articles.json */,
+			);
+			path = DummyJson;
+			sourceTree = "<group>";
+		};
+		821D32D023D2E48F00223488 /* ImageDownloader */ = {
+			isa = PBXGroup;
+			children = (
+				821D32EF23D31FAF00223488 /* StubDownloaderImageView.swift */,
+			);
+			path = ImageDownloader;
+			sourceTree = "<group>";
+		};
+		821D32D223D2E48F00223488 /* WebApi */ = {
+			isa = PBXGroup;
+			children = (
+				821D32D323D2E48F00223488 /* StubServiceApi.swift */,
+				821D32D423D2E48F00223488 /* StubURLSession.swift */,
+			);
+			path = WebApi;
+			sourceTree = "<group>";
+		};
+		821D32D523D2E48F00223488 /* StubTableView */ = {
+			isa = PBXGroup;
+			children = (
+				821D32D623D2E48F00223488 /* StubTableView.swift */,
+			);
+			path = StubTableView;
+			sourceTree = "<group>";
+		};
+		821D32F723D3261200223488 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				821D32F823D3262A00223488 /* StubCoreDataManager.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		827CE85A23D1A54600372509 /* WebServices */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,8 +351,18 @@
 		B1379E7923CF999F00042DE8 /* ArticlesTests */ = {
 			isa = PBXGroup;
 			children = (
-				B1379E7A23CF999F00042DE8 /* ArticlesTests.swift */,
+				821D32FC23D33C3300223488 /* ArticleListViewControllerTests.swift */,
+				821D32BD23D2E48F00223488 /* ArticleDetailViewControllerTests.swift */,
+				821D32B823D2E48F00223488 /* ArticleRemoteRepositoryTests.swift */,
+				821D32C123D2E48F00223488 /* ArticlesListViewModelTests.swift */,
+				821D32C023D2E48F00223488 /* ArticlesTests.swift */,
+				821D32B923D2E48F00223488 /* ArticleViewModelTests.swift */,
+				821D32FA23D3321600223488 /* CoreDataManagerTests.swift */,
+				821D32BB23D2E48F00223488 /* Extensions */,
+				821D32ED23D31F5200223488 /* DownloaderImageViewTests.swift */,
+				821D32C223D2E48F00223488 /* Stubs */,
 				B1379E7C23CF999F00042DE8 /* Info.plist */,
+				821D32B723D2E48E00223488 /* ArticlesTests-Bridging-Header.h */,
 			);
 			path = ArticlesTests;
 			sourceTree = "<group>";
@@ -371,6 +522,7 @@
 					};
 					B1379E7523CF999F00042DE8 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1030;
 						TestTargetID = B1379E5C23CF999E00042DE8;
 					};
 					B1379E8023CF999F00042DE8 = {
@@ -414,6 +566,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				821D32E823D2E48F00223488 /* Articles.json in Resources */,
+				821D32E723D2E48F00223488 /* Article.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,7 +623,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1379E7B23CF999F00042DE8 /* ArticlesTests.swift in Sources */,
+				821D32E023D2E48F00223488 /* StubArticlesRemoteRepository.swift in Sources */,
+				821D32F023D31FAF00223488 /* StubDownloaderImageView.swift in Sources */,
+				821D32DE23D2E48F00223488 /* ArticlesTests.swift in Sources */,
+				821D32E623D2E48F00223488 /* StubNavigationViewController.swift in Sources */,
+				821D32D723D2E48F00223488 /* ArticleRemoteRepositoryTests.swift in Sources */,
+				821D32F423D3238900223488 /* StubMultimedia.swift in Sources */,
+				821D32D823D2E48F00223488 /* ArticleViewModelTests.swift in Sources */,
+				821D32DB23D2E48F00223488 /* ArticleDetailViewControllerTests.swift in Sources */,
+				821D32F623D3239800223488 /* StubHeadline.swift in Sources */,
+				821D32E523D2E48F00223488 /* StubArticle.swift in Sources */,
+				821D32EA23D2E48F00223488 /* StubServiceApi.swift in Sources */,
+				821D32E223D2E48F00223488 /* StubArticles.swift in Sources */,
+				821D32F923D3262A00223488 /* StubCoreDataManager.swift in Sources */,
+				821D32EB23D2E48F00223488 /* StubURLSession.swift in Sources */,
+				821D32EE23D31F5200223488 /* DownloaderImageViewTests.swift in Sources */,
+				821D32FD23D33C3300223488 /* ArticleListViewControllerTests.swift in Sources */,
+				821D32F223D3226D00223488 /* StubResponse.swift in Sources */,
+				821D32FB23D3321600223488 /* CoreDataManagerTests.swift in Sources */,
+				821D32EC23D2E48F00223488 /* StubTableView.swift in Sources */,
+				821D32E123D2E48F00223488 /* StubArticlesViewController.swift in Sources */,
+				821D32DF23D2E48F00223488 /* ArticlesListViewModelTests.swift in Sources */,
+				821D32DA23D2E48F00223488 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -673,6 +848,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4TTY85PZ3U;
 				INFOPLIST_FILE = ArticlesTests/Info.plist;
@@ -684,6 +860,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.org.ArticlesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ArticlesTests/ArticlesTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Articles.app/Articles";
@@ -695,6 +873,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4TTY85PZ3U;
 				INFOPLIST_FILE = ArticlesTests/Info.plist;
@@ -706,6 +885,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.org.ArticlesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ArticlesTests/ArticlesTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Articles.app/Articles";

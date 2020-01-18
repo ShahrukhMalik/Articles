@@ -8,15 +8,10 @@
 
 import Foundation
 
-class RecentSearchViewModel: NSObject {
+struct  RecentSearchViewModel {
     
     let term: String!
     let date: Date!
     
-    init(aTerm: String,
-         aDate: Date) {
-        self.term = aTerm
-        self.date = aDate
-    }
 }
 

@@ -233,7 +233,7 @@
         <!--Custom Navigation Controller-->
         <scene sceneID="bcN-nS-6q8">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9Su-EV-d7K" customClass="CustomNavigationController" customModule="Articles" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="CustomNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="9Su-EV-d7K" customClass="CustomNavigationController" customModule="Articles" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mz6-RP-uzv">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -268,15 +268,15 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecentTableViewCellIdentifier" id="6Lg-Nq-0C7" customClass="RecentTableViewCell" customModule="Articles" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecentTableViewCellIdentifier" rowHeight="30" id="6Lg-Nq-0C7" customClass="RecentTableViewCell" customModule="Articles" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="414" height="30"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Lg-Nq-0C7" id="dn5-Xf-wbb">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yof-8V-cqN">
-                                                            <rect key="frame" x="20" y="2" width="374" height="39.5"/>
+                                                            <rect key="frame" x="20" y="2" width="374" height="26"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -336,6 +336,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="764"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="RvD-hX-cEC"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d2N-bE-bi0" userLabel="First Responder" sceneMemberID="firstResponder"/>

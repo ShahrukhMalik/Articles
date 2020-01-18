@@ -12,12 +12,6 @@ import CoreData
 
 
 extension Search {
-
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<Search> {
-        return NSFetchRequest<Search>(entityName: "Search")
-    }
-
     @NSManaged public var date: NSDate?
     @NSManaged public var term: String?
-
 }

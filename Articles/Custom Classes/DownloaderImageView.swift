@@ -49,6 +49,8 @@ class ImageCache {
         // allow supplying of `nil` to remove old image and then return immediately
         guard let urlString = urlString else { return }
         
+        if urlString.count == 0 { return }
+        
         print("Image URL STRING : \(urlString)")
         
         // check cache

@@ -17,6 +17,8 @@ protocol ArticlesListViewModelDelegate: class {
 
 class ArticlesListViewModel : NSObject {
     
+    var repo: ArticleRemoteRepository = ArticleRemoteRepository(aServiceApI: ServiceApi(), aCoreDataManager: CoreDataManager())
+    
     
     // MARK: - Article List
     
@@ -66,9 +68,6 @@ class ArticlesListViewModel : NSObject {
             self.reloadTableViewWithSearchTextClosure?(searchString)
         }
     }
-    
-    
-    var repo:ArticleRemoteRepository = ArticleRemoteRepository()
     
     var error:String = String() {
         didSet {
@@ -178,7 +177,7 @@ class ArticlesListViewModel : NSObject {
         var processedViewModelArray = [RecentSearchViewModel]()
         
         for item in recentSearchModelList {
-            let viewModel = RecentSearchViewModel(aTerm: item.term, aDate: item.date)
+            let viewModel = RecentSearchViewModel(term: item.term, date: item.date)
             processedViewModelArray.append(viewModel)
         }
         

@@ -23,9 +23,9 @@ class ArticlesListViewController: UIViewController {
     
     
     // MARK: - Properties
-    private var articlesListViewModel: ArticlesListViewModel!
+    var articlesListViewModel: ArticlesListViewModel!
     
-    let searchBar: UISearchBar = UISearchBar()
+    var searchBar: UISearchBar = UISearchBar()
     
     var currentPageNumber: Int = 0
     
@@ -65,7 +65,7 @@ class ArticlesListViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = searchBarButtonItem
     }
     
-    @objc private func handleSearch() {
+    @objc func handleSearch() {
         articlesListViewModel.isSearchVisible = !articlesListViewModel.isSearchVisible
     }
     
@@ -185,14 +185,6 @@ extension ArticlesListViewController : UITableViewDataSource {
 }
 
 extension ArticlesListViewController : UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
-    }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         

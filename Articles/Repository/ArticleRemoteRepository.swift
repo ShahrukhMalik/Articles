@@ -13,12 +13,12 @@ class ArticleRemoteRepository {
     var serviceApi:ServiceApi!
     var coreDataManager: CoreDataManager!
     
+    init(aServiceApI: ServiceApi, aCoreDataManager: CoreDataManager) {
+        serviceApi = aServiceApI
+        coreDataManager = aCoreDataManager
+    }
+    
     func fetchRecentSearches() -> [RecentSearchModel]? {
-        
-        if coreDataManager == nil {
-            coreDataManager = CoreDataManager()
-        }
-        
         var models = [RecentSearchModel]()
         
         let searchManagedObjects = coreDataManager.fetchRecentSearches()
@@ -26,7 +26,7 @@ class ArticleRemoteRepository {
         if let searchObjects = searchManagedObjects {
             
             for search in searchObjects {
-                let search = RecentSearchModel(aTerm: search.term ?? "", aDate: search.date! as Date)
+                let search = RecentSearchModel(term: search.term ?? "", date: search.date! as Date)
                 models.append(search)
             }
         }
@@ -35,20 +35,10 @@ class ArticleRemoteRepository {
     }
     
     func insertSearchTerm(searchterm: String, date: Date) {
-        
-        if coreDataManager == nil {
-            coreDataManager = CoreDataManager()
-        }
-        
         coreDataManager.insertSearchTerm(searchTerm: searchterm, withDate: date)
     }
     
     func fetchArticless(request:Request.Fetch.ArticleRequest , complete :@escaping (ArticleListModel) -> Void, failure:@escaping (String?) -> Void) {
-        
-        if serviceApi == nil {
-            serviceApi = ServiceApi()
-        }
-        
         print("Request : \(request.mURL)")
         
         serviceApi.getData(url: request.mURL, withMethod: .GET) {  (response, error) in
