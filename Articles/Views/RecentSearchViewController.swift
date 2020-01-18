@@ -10,16 +10,21 @@ import UIKit
 
 class RecentSearchViewController: UIViewController {
 
+    
+    // MARK: - IBOutlets
+    
     @IBOutlet weak var tableView: UITableView!
     
     
     // MARK: - Properties
     
-    private var recentSearchListViewModel: RecentSearchListViewModel!
+    var viewModel: ArticlesListViewModel!
+    
+    
+    // MARK: - UIViewController methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         configureViewModel()
     }
     
@@ -28,12 +33,11 @@ class RecentSearchViewController: UIViewController {
         fetchRecentSearches()
     }
     
-    func configureViewModel() {
-        let core = CoreDataManager()
-        let repo = RecentSearchRepository(aCoreDataManager: core)
-        recentSearchListViewModel = RecentSearchListViewModel(rep: repo)
-        
-        recentSearchListViewModel.reloadTableViewClosure =  { [weak self] (obj) in
+    
+    // MARK: - Private methods
+    
+    func configureViewModel() {        
+        viewModel.reloadRecentSearchTableViewClosure =  { [weak self] (obj) in
             
             DispatchQueue.main.async {
                 self?.tableView.reloadData()
@@ -42,7 +46,7 @@ class RecentSearchViewController: UIViewController {
     }
     
     func fetchRecentSearches() {
-        recentSearchListViewModel.fetchRecentSearches()
+        viewModel.fetchRecentSearches()
     }
 }
 
@@ -53,13 +57,13 @@ extension RecentSearchViewController : UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return recentSearchListViewModel.recentSearchViewModels.count
+        return viewModel.recentSearchViewModels.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RecentTableViewCellIdentifier") as! RecentTableViewCell
         
-        let recentViewModel : RecentSearchViewModel = recentSearchListViewModel.recentSearchViewModels[indexPath.row]
+        let recentViewModel : RecentSearchViewModel = viewModel.recentSearchViewModels[indexPath.row]
         
         cell.mainLabel.text = recentViewModel.term
         
@@ -67,7 +71,7 @@ extension RecentSearchViewController : UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return recentSearchListViewModel.title
+        return viewModel.recentTitle
     }
 }
 
@@ -75,11 +79,11 @@ extension RecentSearchViewController : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let recentViewModel : RecentSearchViewModel = recentSearchListViewModel.recentSearchViewModels[indexPath.row]
-        recentSearchListViewModel.sendSelectedTerm(term: recentViewModel.term)
+        let recentViewModel : RecentSearchViewModel = viewModel.recentSearchViewModels[indexPath.row]
+        viewModel.searchTermClicked(searchTerm: recentViewModel.term)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 40.0
+        return 30.0
     }
 }

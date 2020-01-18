@@ -117,6 +117,13 @@ class ArticlesListViewController: UIViewController {
         }
     }
     
+    func showRecentScreen() {
+        recentViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RecentSearchViewController") as? RecentSearchViewController
+        recentViewController?.viewModel = articlesListViewModel
+        
+        self.add(recentViewController!, frame: containerView.frame)
+    }
+    
     
     // MARK: - Navigation
     
@@ -134,8 +141,7 @@ class ArticlesListViewController: UIViewController {
             
             if articlesListViewModel.isSearchVisible && !articlesListViewModel.searchString.isEmpty {
                 // Save recent search
-                let coreDataManager = CoreDataManager()
-                coreDataManager.insertSearchTerm(searchTerm: articlesListViewModel.searchString, withDate: Date())
+                articlesListViewModel.saveSearchTerm(searchTerm: articlesListViewModel.searchString)
             }
         }
     }
@@ -221,6 +227,10 @@ extension ArticlesListViewController : UISearchBarDelegate {
         articlesListViewModel.searchFocused = true
         return true
     }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
 }
 
 extension ArticlesListViewController : ArticlesListViewModelDelegate {
@@ -248,11 +258,7 @@ extension ArticlesListViewController : ArticlesListViewModelDelegate {
         
         if show {
             removeRecentScreen()
-            
-            recentViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RecentSearchViewController") as? RecentSearchViewController
-            recentViewController?.configureViewModel()
-            
-            self.add(recentViewController!, frame: containerView.frame)
+            showRecentScreen()
             
         } else {
             removeRecentScreen()

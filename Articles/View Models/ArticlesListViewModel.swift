@@ -17,10 +17,8 @@ protocol ArticlesListViewModelDelegate: class {
 
 class ArticlesListViewModel : NSObject {
     
-    override init() {
-        super.init()
-        NotificationCenter.default.addObserver(self, selector: #selector(searchTermClicked(notif:)), name: NSNotification.Name(rawValue: "SearchTermTapped"), object: nil)
-    }
+    
+    // MARK: - Article List
     
     var delegate: ArticlesListViewModelDelegate?
     
@@ -101,10 +99,9 @@ class ArticlesListViewModel : NSObject {
     }
     
     
-    // MARK: - Private methods
-    @objc func searchTermClicked(notif: Notification) {
-        let dic = notif.userInfo
-        let searchTerm = dic?["Search"] as! String
+    // MARK: - Article List Private methods
+    
+    func searchTermClicked(searchTerm: String) {
         searchString = searchTerm
         delegate?.updateSearchFieldWithText(search: searchTerm)
     }
@@ -147,5 +144,44 @@ class ArticlesListViewModel : NSObject {
         
         
         self.articleViewModels.append(contentsOf: processedViewModelArray)
+    }
+    
+    // MARK: - Recent searches
+    
+    var reloadRecentSearchTableViewClosure: ((Any?)->())?
+    
+    var recentTitle: String {
+        return "Recent Search"
+    }
+    
+    var recentSearchViewModels: [RecentSearchViewModel] = [RecentSearchViewModel]() {
+        didSet {
+            self.reloadRecentSearchTableViewClosure?(nil)
+        }
+    }
+    
+    // MARK: - Core Data Call
+    
+    func fetchRecentSearches() {
+        if let recentSearchModels = repo.fetchRecentSearches() {
+            convertRecentSearchModelListToRecentSearchViewModelList(recentSearchModelList: recentSearchModels)
+        }
+    }
+    
+    func saveSearchTerm(searchTerm: String) {
+        repo.insertSearchTerm(searchterm: searchTerm, date: Date())
+    }
+    
+    // MARK: - Recent Search Private methods
+    
+    func convertRecentSearchModelListToRecentSearchViewModelList(recentSearchModelList : [RecentSearchModel]) {
+        var processedViewModelArray = [RecentSearchViewModel]()
+        
+        for item in recentSearchModelList {
+            let viewModel = RecentSearchViewModel(aTerm: item.term, aDate: item.date)
+            processedViewModelArray.append(viewModel)
+        }
+        
+        recentSearchViewModels = processedViewModelArray
     }
 }
