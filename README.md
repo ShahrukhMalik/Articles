@@ -26,22 +26,22 @@ Open .xcodeproj and press **Command + R**
 # Unit testing and code coverage
 Open .xcodeproj and press **Command + U** to run the test cases. Code coverage is shown in following screenshot:-
 
-![alt text](https://cdn1.imggmi.com/uploads/2020/1/18/c1210133b86d2cc6c48edf7765bc6374-full.png)
+![alt text](https://user-images.githubusercontent.com/11407348/72669828-f37b6880-3a4f-11ea-824e-e05ef0b7d06a.png)
 
 # Screenshots
 Application supports both portrait and landscape orientations. Auto layouts are used to design screens in accordance with Apple Human Interface guidelines.
 
 **Portrait**
 
-![alt text](https://cdn1.imggmi.com/uploads/2020/1/18/2fa46776643333e553bf82694ad72055-full.png)
+![alt text](https://user-images.githubusercontent.com/11407348/72669845-27568e00-3a50-11ea-952e-966df40a1b8a.png)
 
-![alt text](https://cdn1.imggmi.com/uploads/2020/1/18/4bd8033c0f3cc5326d0159f574b21055-full.png)
+![alt text](https://user-images.githubusercontent.com/11407348/72669855-3e957b80-3a50-11ea-897e-3ae3bdaf59ec.png)
 
 **Landscape**
 
-![alt text](https://cdn1.imggmi.com/uploads/2020/1/18/c3b50a591727371c145195318bfec8ea-full.png)
+![alt text](https://user-images.githubusercontent.com/11407348/72669861-5240e200-3a50-11ea-9c84-94a342c4a284.png)
 
-![alt text](https://cdn1.imggmi.com/uploads/2020/1/18/9a0966be374cd78ac5ab235ec5d7766d-full.png)
+![alt text](https://user-images.githubusercontent.com/11407348/72669862-61279480-3a50-11ea-8f76-8c5ff21526fb.png)
 
 
 # Features
