@@ -33,15 +33,15 @@ Application supports both portrait and landscape orientations. Auto layouts are 
 
 **Portrait**
 
-![alt text](https://cdn1.imggmi.com/uploads/2019/12/20/14fab006f490c42744a7ae60e7e14895-full.png)
+![alt text](https://cdn1.imggmi.com/uploads/2020/1/18/2fa46776643333e553bf82694ad72055-full.png)
 
-![alt text](https://cdn1.imggmi.com/uploads/2019/12/20/7f6ea0a1443b5bc96b0a3ae0fe579183-full.png)
+![alt text](https://cdn1.imggmi.com/uploads/2020/1/18/4bd8033c0f3cc5326d0159f574b21055-full.png)
 
 **Landscape**
 
-![alt text](https://cdn1.imggmi.com/uploads/2019/12/20/6bbc5ff22d5af9022c6f367aebc7e6e9-full.png)
+![alt text](https://cdn1.imggmi.com/uploads/2020/1/18/c3b50a591727371c145195318bfec8ea-full.png)
 
-![alt text](https://cdn1.imggmi.com/uploads/2019/12/20/3242033fd3021fc3f1b6ed4e40f4cbbf-full.png)
+![alt text](https://cdn1.imggmi.com/uploads/2020/1/18/9a0966be374cd78ac5ab235ec5d7766d-full.png)
 
 
 # Features
